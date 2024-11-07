@@ -132,7 +132,7 @@ app.post('/login', loginLimiter, async (req, res) => {
     const token = jwt.sign(
       { userId: user._id, email: user.email },
       process.env.JWT_SECRET,
-      { expiresIn: '1h' } // Token expires in 1 hour
+      { expiresIn: '1h' } 
     );
 
     // Set secure cookie with JWT token

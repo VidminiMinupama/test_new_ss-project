@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    border-radius: 8px;
+    background: #B2E3D4; /* Light mint green */
+    box-shadow: 0 0 25px #D39A9A; /* Darker pink shadow */
+    border: 2px solid #F4C2C2; /* Lighter pink border */
+}
+
+.container h2 {
+    color: #000000;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.4s ease;
+}
+
+.input-box input:focus {
+    border-bottom: 2px solid #D39A9A; /* Darker pink when focused */
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #b37f7f;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #D39A9A; /* Label color changes on focus */
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.input-box i.fa {
+    font-size: 18px;
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 900;
+    border: 6px solid #D39A9A;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#D39A9A, #F4C2C2, #D39A9A);
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn:hover::before {
+    top: 0;
+}
+
+.regi-link {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.regi-link a {
+    text-decoration: none;
+    color: #ad6d6d;
+    font-weight: 600;
+}
+
+.regi-link a:hover {
+    text-decoration: underline;
+}
+
+/* Register form styles */
+.form-box {
+    padding: 0 40px; /* Padding for both forms */
+}
+
+.form-box.Register {
+    display: none; /* Hidden by default */
+}
+
+.info-content.Register {
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+    display: none; /* Hidden by default */
+}
+
+#error-box {
+    display: none;
+    color: red;
+    margin-top: 10px;
+}

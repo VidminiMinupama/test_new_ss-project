@@ -149,6 +149,6 @@ app.post('/login', loginLimiter, async (req, res) => {
 });
 
 // Start the server and listen on 0.0.0.0
-app.listen(3000, '0.0.0.0', () => {
-  console.log('Server is running on port 3000');
+app.listen(5000, '0.0.0.0', () => {
+  console.log('Server is running on port 5000');
 });

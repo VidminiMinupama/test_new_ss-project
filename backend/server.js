@@ -18,6 +18,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 // Routes
 app.use('/api/auth', authRoutes);
 
+const cors = require('cors');
+app.use(cors({ origin: 'http://localhost:3000' })); // Allow requests from the front-end
+
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
